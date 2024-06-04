@@ -1,0 +1,142 @@
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #F5F5DC;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Defina a altura do contêiner para preencher a altura da janela de visualização */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Barra de Navegação */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0F110C;
+  padding: 10px 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.navbar-links,
+.navbar-user {
+  margin-left: auto;
+}
+
+.navbar-links a,
+.navbar-user a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.navbar-user a.signup-button {
+  background-color: #5748F9;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.card {
+  --main-color: #000;
+  --bg-color: #e8cb9a;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  padding: 20px;
+  width: 320px;
+  background: var(--bg-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  border: 1px solid #000;
+}
+
+.card__menu svg {
+  width: 20px;
+  height: 20px;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.card__img {
+  width: 170px;
+  height: 170px;
+  background: linear-gradient(90deg, #FFF8F7, #F0F7DF);
+  border-radius: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-weight: 600;
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+.card__subtitle {
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--main-color);
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.card__price {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--main-color);
+}
+
+.card__counter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  padding: 5px;
+  border-radius: 50px;
+}
+
+.card__counter-score,
+.card__btn {
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--main-color);
+}
+

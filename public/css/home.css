@@ -1,0 +1,162 @@
+/* Estilos Globais */
+/* Estilos para telas grandes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0F110C;
+    padding: 10px 20px;
+}
+
+.navbar-logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: auto;
+    /* Move o logotipo para a esquerda */
+}
+
+.navbar-links,
+.navbar-user {
+    display: flex;
+    align-items: center; 
+}
+
+.navbar-links a,
+.navbar-user a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar-user a.signup-button {
+    background-color: #5748F9;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: beige;
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Conteúdo Principal */
+main {
+    padding: 20px;
+}
+
+/* Seções */
+.introduction,
+.drinks {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Container */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Vídeo */
+.video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.video-content {
+    margin-right: 20px;
+}
+
+.video-text {
+    text-align: left;
+}
+
+.video iframe {
+    max-width: 100%;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar-links,
+    .navbar-user {
+        margin: 10px 0;
+    }
+
+    .header-content {
+        padding: 0 20px;
+    }
+
+    main {
+        padding: 10px;
+    }
+}
+
+/* Estilos para telas grandes */
+.drink-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    align-items: flex-start; /* Alinha os itens ao topo */
+}
+
+.drink-item {
+    text-align: center;
+}
+
+.drink-item img {
+    width: 200px;
+    height: auto;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    .drink-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .drink-item {
+        margin-bottom: 20px; /* Espaçamento entre os itens */
+    }
+}
+
+
+.drink-text {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: center;
+}
+
+.drink-images img {
+    width: 200px;
+    height: auto;
+    display: grid;
+    
+}

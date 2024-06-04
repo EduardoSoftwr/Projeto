@@ -1,0 +1,214 @@
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: beige;
+    height: 100vh; /* Adicionado para garantir que o body ocupe a altura total da tela */
+    display: flex; /* Adicionado para permitir a centralização do conteúdo */
+    justify-content: center; /* Adicionado para centralizar horizontalmente */
+    align-items: center; /* Adicionado para centralizar verticalmente */
+}
+
+/* Barra de Navegação */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #0F110C;
+    padding: 10px 20px;
+    color: white;
+    width: 100%; /* Adicionado para garantir que a navbar ocupe toda a largura da tela */
+    position: fixed; /* Adicionado para fixar a navbar no topo */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Adicionado para garantir que a navbar fique acima de outros elementos */
+}
+
+.navbar-logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar-links,
+.navbar-user {
+    margin-left: auto;
+}
+
+.navbar-links a,
+.navbar-user a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar-user a.signup-button {
+    background-color: #5748F9;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+
+    .navbar-links,
+    .navbar-user {
+        display: none;
+    }
+
+    .navbar-links.active,
+    .navbar-user.active {
+        display: flex;
+    }
+}
+
+/* Estilos para o botão de menu de hambúrguer */
+.navbar-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.navbar-toggle {
+    margin-left: auto;
+}
+
+.navbar-links,
+.navbar-user {
+    margin-right: 10px;
+}
+
+.navbar-links.active,
+.navbar-user.active {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0F110C;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 60px); /* Ajustado para ocupar a altura total da tela, subtraindo a altura da navbar */
+    padding-top: 60px; /* Adicionado para evitar que o formulário fique atrás da navbar */
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #e8cb9a;
+    color: #000;
+    border: 1px solid #000;
+    align-items: center
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    color: #483B28;
+    text-align: center;
+}
+
+.form-logo {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form label {
+    position: relative;
+}
+
+.form label .input {
+    background-color: #5D4C3A;
+    color: #e8cb9a;
+    width: 100%;
+    padding: 20px 5px 5px 10px;
+    outline: 0;
+    border: 1px solid rgba(105, 105, 105, 0.397);
+    border-radius: 10px;
+}
+
+.form label .input+span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+}
+
+.form label .input:placeholder-shown+span {
+    top: 12.5px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.form label .input:focus+span,
+.form label .input:valid+span {
+    color: #EEEEEE;
+    top: 0px;
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+.input::placeholder {
+    color: #EEEEEE;
+}
+
+.input {
+    font-size: medium;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transition: .3s ease;
+    background-color: #5D4C3A;
+}
+
+.submit:hover {
+    background-color: #2C261A;
+}
+
+/* Estilos para telas grandes */
+@media screen and (min-width: 768px) {
+    .form-container {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 600px) {
+    .form-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
